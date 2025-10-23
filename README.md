@@ -1,4 +1,22 @@
-# React + Vite
+# Zerodha Dashboard Application
+
+A modern React-based dashboard application built with Vite, inspired by Zerodha's trading interface.
+
+## Tech Stack
+
+- **React + Vite** - Fast development with HMR
+- **Tailwind CSS** - Utility-first CSS framework
+- **ESLint** - Code quality and consistency
+
+## Features
+
+- Interactive stock charts
+- Portfolio management
+- Real-time order panel
+- Responsive design
+- Modern UI components
+
+## Getting Started
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
