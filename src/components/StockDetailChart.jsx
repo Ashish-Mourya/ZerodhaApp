@@ -5,7 +5,6 @@ import { X, TrendingUp, TrendingDown } from 'lucide-react';
 const StockDetailChart = ({ stock, onClose }) => {
   const chartRef = useRef(null);
 
-  // Generate realistic stock data
   const generateStockData = (basePrice) => {
     const data = [];
     let price = basePrice;
@@ -15,7 +14,6 @@ const StockDetailChart = ({ stock, onClose }) => {
       const date = new Date(now);
       date.setDate(date.getDate() - i);
       
-      // Random walk for stock price
       const change = (Math.random() - 0.48) * (basePrice * 0.02);
       price = Math.max(basePrice * 0.7, Math.min(basePrice * 1.3, price + change));
       
@@ -220,7 +218,6 @@ const StockDetailChart = ({ stock, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-white z-[100] flex flex-col overflow-hidden">
-      {/* Header */}
       <div className="bg-white border-b border-gray-200 px-4 py-3 flex-shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -278,7 +275,6 @@ const StockDetailChart = ({ stock, onClose }) => {
         </div>
       </div>
 
-      {/* Chart Tabs */}
       <div className="bg-white border-b border-gray-200 px-4 flex-shrink-0">
         <div className="flex gap-4">
           <button className="py-2.5 text-xs font-semibold border-b-2 border-blue-500 text-blue-600">
@@ -293,7 +289,6 @@ const StockDetailChart = ({ stock, onClose }) => {
         </div>
       </div>
 
-      {/* Chart Area */}
       <div className="flex-1 p-4 bg-gray-50 overflow-auto min-h-0">
         <div className="bg-white rounded-lg border border-gray-200 p-3 h-full min-h-[500px]">
           <div ref={chartRef} className="w-full h-full"></div>

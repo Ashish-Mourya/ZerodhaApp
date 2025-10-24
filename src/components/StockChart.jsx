@@ -46,7 +46,6 @@ const StockChart = ({ type = 'line' }) => {
         };
         chart.setOption(option);
       } else {
-        // Bar chart for holdings
         const option = {
           tooltip: { trigger: 'item' },
           series: [

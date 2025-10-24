@@ -56,7 +56,6 @@ const Dashboard = ({ selectedTab }) => {
   if (selectedTab === 'dashboard') {
     return (
       <div className="p-6">
-        {/* Warning Banner */}
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6 flex items-center gap-2">
           <span className="text-yellow-600 text-xl">⚠</span>
           <span className="text-sm text-gray-700">
@@ -68,10 +67,8 @@ const Dashboard = ({ selectedTab }) => {
           </span>
         </div>
 
-        {/* Greeting */}
         <h1 className="text-2xl font-light text-gray-900 mb-6">Hi, Demo</h1>
 
-        {/* Portfolio Cards */}
         <div className="grid grid-cols-2 gap-5 mb-6">
           <PortfolioCard
             title="Equity"
@@ -89,7 +86,6 @@ const Dashboard = ({ selectedTab }) => {
           />
         </div>
 
-        {/* Holdings Section */}
         <div className="bg-white rounded-lg border border-gray-200 p-5 mb-6 hover:shadow-lg transition-shadow">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-6 h-6 rounded bg-gray-100 flex items-center justify-center">
@@ -121,7 +117,6 @@ const Dashboard = ({ selectedTab }) => {
           </div>
         </div>
 
-        {/* Market Overview & Positions */}
         <div className="grid grid-cols-2 gap-5">
           <StockChart type="line" />
 

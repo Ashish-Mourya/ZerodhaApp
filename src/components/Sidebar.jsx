@@ -16,7 +16,6 @@ const stocks = [
 const Sidebar = ({ onStockClick }) => {
   return (
     <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
-      {/* Header */}
       <div className="p-4 border-b border-gray-200">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
@@ -36,7 +35,6 @@ const Sidebar = ({ onStockClick }) => {
         </div>
       </div>
 
-      {/* Watchlist */}
       <div className="flex-1 overflow-y-auto">
         {stocks.map((stock, i) => (
           <div
@@ -92,7 +90,6 @@ const Sidebar = ({ onStockClick }) => {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="p-3 border-t border-gray-200 flex justify-center gap-2">
         {[1, 2, 3, 4, 5, 6, 7].map((page) => (
           <button

@@ -29,15 +29,11 @@ const App = () => {
 
   return (
     <div className="flex h-screen bg-gray-50 overflow-hidden">
-      {/* Sidebar */}
       <Sidebar onStockClick={handleStockClick} />
 
-      {/* Main Content */}
       <div className="flex-1 flex flex-col bg-white">
-        {/* Top Navigation Bar */}
         <Navbar />
 
-        {/* Navigation Tabs */}
         <div className="border-b border-gray-200 bg-white">
           <div className="flex items-center gap-8 px-6">
             {['Dashboard', 'Orders', 'Holdings', 'Positions', 'Bids', 'Funds'].map((tab) => (
@@ -56,13 +52,11 @@ const App = () => {
           </div>
         </div>
 
-        {/* Content Area */}
         <div className="flex-1 overflow-y-auto bg-gray-50">
           <Dashboard selectedTab={selectedTab} />
         </div>
       </div>
 
-      {/* Quick Order Card */}
       {quickOrder && (
         <QuickOrderCard 
           stock={quickOrder.stock}
@@ -70,7 +64,6 @@ const App = () => {
         />
       )}
 
-      {/* Stock Detail Chart */}
       <StockDetailChart stock={selectedStock} onClose={closeStockChart} />
     </div>
   );

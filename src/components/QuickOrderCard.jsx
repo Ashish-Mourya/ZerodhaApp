@@ -18,13 +18,11 @@ const QuickOrderCard = ({ stock, onClose }) => {
 
   return (
     <>
-      {/* Backdrop with blur */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 animate-fade-in"
         onClick={onClose}
       ></div>
 
-      {/* Quick Order Card - Centered & Scrollable */}
       <div 
         className={`fixed z-50 bg-white rounded-3xl shadow-2xl w-[420px] max-h-[90vh] overflow-y-auto transition-all duration-300 ${
           animate ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
@@ -35,7 +33,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
           transform: 'translate(-50%, -50%)'
         }}
       >
-        {/* Header - Animated Gradient Background */}
         <div className="relative overflow-hidden rounded-t-3xl">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 animate-gradient"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)]"></div>
@@ -68,7 +65,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
               </button>
             </div>
 
-            {/* Current Price Display - Glassmorphism */}
             <div className="bg-white/20 backdrop-blur-xl rounded-2xl p-4 border border-white/20 shadow-xl">
               <div className="flex items-center justify-between">
                 <div>
@@ -96,7 +92,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
           </div>
         </div>
 
-        {/* Order Type Buttons */}
         <div className="p-5">
           <div className="flex gap-3 mb-5">
             <button
@@ -125,9 +120,7 @@ const QuickOrderCard = ({ stock, onClose }) => {
             </button>
           </div>
 
-          {/* Inputs Grid */}
           <div className="grid grid-cols-2 gap-3 mb-4">
-            {/* Quantity Input */}
             <div>
               <label className="text-xs font-bold text-gray-700 block mb-2">
                 Quantity
@@ -142,7 +135,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
               />
             </div>
 
-            {/* Price Input */}
             <div>
               <label className="text-xs font-bold text-gray-700 block mb-2">
                 Price (₹)
@@ -158,7 +150,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
             </div>
           </div>
 
-          {/* Order Type Selection */}
           <div className="mb-4">
             <label className="text-xs font-bold text-gray-700 block mb-2">
               Order Type
@@ -171,7 +162,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
             </select>
           </div>
 
-          {/* Product Type */}
           <div className="mb-5 p-3 bg-gray-50 rounded-xl">
             <div className="text-xs font-bold text-gray-700 mb-2">Product</div>
             <div className="flex gap-3">
@@ -190,7 +180,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
             </div>
           </div>
 
-          {/* Total Amount Display */}
           <div className="mb-4 p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border-2 border-blue-100">
             <div className="flex items-center justify-between">
               <div>
@@ -204,7 +193,6 @@ const QuickOrderCard = ({ stock, onClose }) => {
             </div>
           </div>
 
-          {/* Action Buttons */}
           <button
             className={`w-full py-4 rounded-2xl font-bold text-base shadow-2xl transition-all transform hover:scale-105 active:scale-95 mb-3 relative overflow-hidden group ${
               orderType === 'BUY'
